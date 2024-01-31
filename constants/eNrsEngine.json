@@ -1,0 +1,224 @@
+[
+    {
+        "type": "constructor",
+        "inputs": [
+            { "name": "tokenAddresses", "type": "address[]", "internalType": "address[]" },
+            { "name": "priceFeeds", "type": "address[]", "internalType": "address[]" },
+            { "name": "eNRSAddress", "type": "address", "internalType": "address" }
+        ],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "burneNRS",
+        "inputs": [{ "name": "amount", "type": "uint256", "internalType": "uint256" }],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "calculateHealthFactor",
+        "inputs": [
+            { "name": "totalMinted", "type": "uint256", "internalType": "uint256" },
+            { "name": "collateralInUSD", "type": "uint256", "internalType": "uint256" }
+        ],
+        "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+        "stateMutability": "pure"
+    },
+    {
+        "type": "function",
+        "name": "depositCollateral",
+        "inputs": [
+            { "name": "tokenCollateralAddress", "type": "address", "internalType": "address" },
+            { "name": "amountCollateral", "type": "uint256", "internalType": "uint256" }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "depositCollateralAndMinteNRS",
+        "inputs": [
+            { "name": "tokenCollateralAddress", "type": "address", "internalType": "address" },
+            { "name": "amountCollateral", "type": "uint256", "internalType": "uint256" },
+            { "name": "amounteNRStoMint", "type": "uint256", "internalType": "uint256" }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "getAccountCollateralValue",
+        "inputs": [{ "name": "user", "type": "address", "internalType": "address" }],
+        "outputs": [
+            { "name": "totalCollateralValueInUSD", "type": "uint256", "internalType": "uint256" }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "getAccountInfo",
+        "inputs": [{ "name": "user", "type": "address", "internalType": "address" }],
+        "outputs": [
+            { "name": "", "type": "uint256", "internalType": "uint256" },
+            { "name": "", "type": "uint256", "internalType": "uint256" }
+        ],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "getCollateralBalance",
+        "inputs": [
+            { "name": "user", "type": "address", "internalType": "address" },
+            { "name": "token", "type": "address", "internalType": "address" }
+        ],
+        "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "getCollateralTokens",
+        "inputs": [],
+        "outputs": [{ "name": "", "type": "address[]", "internalType": "address[]" }],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "getHealthFactor",
+        "inputs": [],
+        "outputs": [],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "getNRSValue",
+        "inputs": [
+            { "name": "token", "type": "address", "internalType": "address" },
+            { "name": "amount", "type": "uint256", "internalType": "uint256" }
+        ],
+        "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "getTestNumber",
+        "inputs": [],
+        "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+        "stateMutability": "pure"
+    },
+    {
+        "type": "function",
+        "name": "getTokenAmountFromUsd",
+        "inputs": [
+            { "name": "token", "type": "address", "internalType": "address" },
+            { "name": "USDAmountinWei", "type": "uint256", "internalType": "uint256" }
+        ],
+        "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+        "stateMutability": "view"
+    },
+    {
+        "type": "function",
+        "name": "liquidate",
+        "inputs": [
+            { "name": "collateralAddress", "type": "address", "internalType": "address" },
+            { "name": "user", "type": "address", "internalType": "address" },
+            { "name": "debtToCover", "type": "uint256", "internalType": "uint256" }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "minteNRS",
+        "inputs": [{ "name": "_amountToMint", "type": "uint256", "internalType": "uint256" }],
+        "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "redeemCollateral",
+        "inputs": [
+            { "name": "tokenCollateralAddress", "type": "address", "internalType": "address" },
+            { "name": "amountCollateral", "type": "uint256", "internalType": "uint256" }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "function",
+        "name": "redeemCollateralForeNRS",
+        "inputs": [
+            { "name": "tokenCollateralAddress", "type": "address", "internalType": "address" },
+            { "name": "amountCollateral", "type": "uint256", "internalType": "uint256" },
+            { "name": "amounteNRStoBurn", "type": "uint256", "internalType": "uint256" }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+    },
+    {
+        "type": "event",
+        "name": "CollateralDeposited",
+        "inputs": [
+            { "name": "", "type": "address", "indexed": false, "internalType": "address" },
+            { "name": "", "type": "address", "indexed": false, "internalType": "address" },
+            { "name": "", "type": "uint256", "indexed": false, "internalType": "uint256" }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "CollateralRedeemed",
+        "inputs": [
+            {
+                "name": "redeemedFrom",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            {
+                "name": "RedeemedTo",
+                "type": "address",
+                "indexed": true,
+                "internalType": "address"
+            },
+            { "name": "token", "type": "address", "indexed": true, "internalType": "address" },
+            { "name": "amount", "type": "uint256", "indexed": false, "internalType": "uint256" }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "burned",
+        "inputs": [
+            { "name": "account", "type": "address", "indexed": true, "internalType": "address" },
+            { "name": "amount", "type": "uint256", "indexed": false, "internalType": "uint256" }
+        ],
+        "anonymous": false
+    },
+    {
+        "type": "event",
+        "name": "minted",
+        "inputs": [
+            { "name": "account", "type": "address", "indexed": true, "internalType": "address" },
+            { "name": "amount", "type": "uint256", "indexed": false, "internalType": "uint256" }
+        ],
+        "anonymous": false
+    },
+    { "type": "error", "name": "ReentrancyGuardReentrantCall", "inputs": [] },
+    {
+        "type": "error",
+        "name": "eNRS_Engine_BreaksHealthFactor",
+        "inputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }]
+    },
+    { "type": "error", "name": "eNRS_Engine_HealthFactorNotImproved", "inputs": [] },
+    { "type": "error", "name": "eNRS_Engine_HealthFactorOKAY", "inputs": [] },
+    { "type": "error", "name": "eNRS_Engine_MintFailed", "inputs": [] },
+    { "type": "error", "name": "eNRS_Engine_NeedsMoreThanZero", "inputs": [] },
+    {
+        "type": "error",
+        "name": "eNRS_Engine_TokenAddressesAndPriceFeedAddressesMismatch",
+        "inputs": []
+    },
+    { "type": "error", "name": "eNRS_Engine_Token_NOT_ALLOWED", "inputs": [] },
+    { "type": "error", "name": "eNRS_Engine_TransferFailed", "inputs": [] }
+]
